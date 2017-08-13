@@ -1,0 +1,8 @@
+click("1491630044286.png")
+wait("1491630110161.png")
+type("calc" + Key.ENTER)
+wait("1491630710712.png")
+click(Pattern("1491630710712.png").targetOffset(-40,67))
+click(Pattern("1491630710712.png").targetOffset(206,61))
+click(Pattern("1491630710712.png").targetOffset(-40,69))
+click(Pattern("1491630710712.png").targetOffset(202,133))

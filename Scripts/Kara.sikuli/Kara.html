@@ -67,7 +67,7 @@
    </head>
 <body>
 <div class="info">
-<h2>Higurashi.sikuli</h2> <a href="Higurashi.zip">(Download this script)</a>
+<h2>Kara.sikuli</h2> <a href="Kara.zip">(Download this script)</a>
 </div>
 <pre class="sikuli-code">
 Settings.MoveMouseDelay = <span class="dig">0</span>
@@ -81,9 +81,9 @@ count = <span class="dig">0</span>
 Env.addHotkey(Key.F1, KeyModifier.ALT, runHotkey)
 
 <span class="kw">while</span>(running):
-    <span class="kw">if</span> (exists(Pattern(<img src="1502652749997.png" />).similar(<span class="dig">0.50</span>)) <span class="kw">or</span> exists(Pattern(<img src="1502652648894.png" />).similar(<span class="dig">0.52</span>)) <span class="kw">or</span> count == <span class="dig">10</span>):
+    <span class="kw">if</span> (exists(Pattern(<img src="1507354727310.png" />).similar(<span class="dig">0.80</span>)) <span class="kw">or</span> exists(<img src="1507354826038.png" />) <span class="kw">or</span> count == <span class="dig">10</span>):
 
-        <span class="skw">wait</span>(<span class="dig">1.5</span> *  count + <span class="dig">1</span>)
+        <span class="skw">wait</span>(<span class="dig">1.5</span> *  count + <span class="dig">2</span>)
         <span class="skw">type</span>(Key.ENTER)
         count = <span class="dig">0</span>
     <span class="kw">else</span>:

@@ -82,7 +82,7 @@ scr1 = Screen(<span class="dig">1</span>)
 Env.addHotkey(Key.F1, KeyModifier.ALT, runHotkey)
 
 <span class="kw">while</span>(running):
-    <span class="kw">if</span> (exists(<img src="1507485878000.png" />, <span class="dig">.5</span>) <span class="kw">and</span> scr1.exists(Pattern(<img src="1507491127022.png" />).exact(), <span class="dig">.5</span>)):
+    <span class="kw">if</span> ((exists(<img src="1507485878000.png" />, <span class="dig">.5</span>) <span class="kw">or</span> (exists(<img src="1509668195740.png" />, <span class="dig">.5</span>))) <span class="kw">and</span> scr1.exists(Pattern(<img src="1507491127022.png" />).exact(), <span class="dig">.5</span>)):
         <span class="cmt">#If tip window shows up, wait</span>
         <span class="skw">wait</span>(<span class="dig">3</span>)
         <span class="cmt">#Finding element in second screen</span>

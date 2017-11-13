@@ -9,13 +9,21 @@ def runHotkey(event):
 Env.addHotkey(Key.F1, KeyModifier.ALT, runHotkey)
 
 while(running):
-    if (exists(Pattern("1507354727310.png").similar(0.80)) or exists("1507354826038.png") or count == 10):
-        
-        wait(1.5 *  count + 2)
-        type(Key.ENTER)
-        count = 0
-    else:
-        count += 1
+    if ((exists("1508618395181.png", .5)
+            or exists("1508119076616.png", .5)
+            or exists("1508618699091.png", .5)
+            or exists(Pattern("1508620235412.png").exact(), .5)
+            or exists("1508624294446.png", .5)
+                
+                
+                )
+            and exists("1508618845400.png", .5)
+            
+            ):
+        click("1507486006667.png")
+        wait(1)
+        exit()    
+    wait(1)
     wait(1)
         
         

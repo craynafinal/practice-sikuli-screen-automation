@@ -18,14 +18,9 @@ while(running):
         type(Key.F7)
         
         exit()
-    elif (exists(Pattern("1507484956784.png").similar(0.50), .5) or exists(Pattern("1507485545706.png").similar(0.55), .5) or exists("1507484935580.png") or count == 10):
-        #Regular sequence
-        wait(1.5 *  count + 1)
-        type(Key.ENTER)
-        count = 0
     else:
-        count += 1
-    wait(1)
+        wait(2.5)
+        type(Key.ENTER)
         
         
         

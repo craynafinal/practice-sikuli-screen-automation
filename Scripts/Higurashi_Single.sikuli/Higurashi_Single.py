@@ -1,6 +1,5 @@
 Settings.MoveMouseDelay = 0
 running = True
-count = 0
 
 def runHotkey(event):
     global running
@@ -9,8 +8,7 @@ def runHotkey(event):
 Env.addHotkey(Key.F1, KeyModifier.ALT, runHotkey)
 
 while(running):
-    if ((exists("1507485878000.png", .05) or (exists("1509668195740.png", .05))) and exists("1511398610583.png", .1)
-            ):
+    if (exists("1507485878000.png", .005) or (exists("1509668195740.png", .005))):
         #If tip window shows up, wait
         wait(2)
         #Finding element in second screen
@@ -19,15 +17,10 @@ while(running):
         click("1507486006667.png")
         
         exit()
-    elif (exists(Pattern("1507484956784.png").similar(0.45), .03) or exists(Pattern("1507485545706.png").similar(0.45), .03) or exists(Pattern("1507484935580.png").similar(0.45), .03) or count == 10):
+    elif (exists("1512201064021.png", .003)or exists(Pattern("1507484935580.png").similar(0.45), .003)):
         #Regular sequence
         wait(.03)
         type(" ")
-        count = 0
     else:
-        count += 1
-    wait(.03)
-        
-        
-        
-        
+        wait(.03)
+        type(" ")

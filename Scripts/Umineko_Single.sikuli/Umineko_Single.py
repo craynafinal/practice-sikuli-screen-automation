@@ -12,11 +12,13 @@ while(running):
         #If tip window shows up, wait
         wait(2)
         #Finding element in second screen
-        click("1511398531290.png")
+        #click("1511398531290.png")
+        click("1514157343393.png")
         wait(.5)
-        click("1507486006667.png")
+        type(Key.F7)
         
         exit()
     else:
         wait(.5)
-        click("1512958383576.png")
+        #click("1512958383576.png")
+        click(Pattern("1514157458056.png").exact())

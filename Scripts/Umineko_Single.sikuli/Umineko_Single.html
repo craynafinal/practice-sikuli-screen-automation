@@ -67,7 +67,7 @@
    </head>
 <body>
 <div class="info">
-<h2>Umineko.sikuli</h2> <a href="Umineko.zip">(Download this script)</a>
+<h2>Umineko_Single.sikuli</h2> <a href="Umineko_Single.zip">(Download this script)</a>
 </div>
 <pre class="sikuli-code">
 Settings.MoveMouseDelay = <span class="dig">0</span>
@@ -84,14 +84,16 @@ Env.addHotkey(Key.F1, KeyModifier.ALT, runHotkey)
         <span class="cmt">#If tip window shows up, wait</span>
         <span class="skw">wait</span>(<span class="dig">2</span>)
         <span class="cmt">#Finding element in second screen</span>
-        <span class="skw">click</span>(<img src="1511398531290.png" />)
+        <span class="cmt">#click("1511398531290.png")</span>
+        <span class="skw">click</span>(<img src="1514157343393.png" />)
         <span class="skw">wait</span>(<span class="dig">.5</span>)
-        <span class="skw">click</span>(<img src="1507486006667.png" />)
+        <span class="skw">type</span>(Key.F7)
 
         exit()
     <span class="kw">else</span>:
         <span class="skw">wait</span>(<span class="dig">.5</span>)
-        <span class="skw">click</span>(<img src="1512958383576.png" />)
+        <span class="cmt">#click("1512958383576.png")</span>
+        <span class="skw">click</span>(Pattern(<img src="1514157458056.png" />).exact())
 </pre>
 </body>
 </html>

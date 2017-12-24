@@ -1,5 +1,6 @@
 Settings.MoveMouseDelay = 0
 running = True
+scr1 = Screen(1)
 
 def runHotkey(event):
     global running
@@ -8,15 +9,14 @@ def runHotkey(event):
 Env.addHotkey(Key.F1, KeyModifier.ALT, runHotkey)
 
 while(running):
-    if (exists("1512958109835.png", .5) and exists("1512958130690.png", .5)):
-        #If tip window shows up, wait
+    if (exists("1513223956876.png", .5) and exists("1513223975753.png", .5)):
+         #If tip window shows up, wait
         wait(2)
         #Finding element in second screen
-        click("1511398531290.png")
-        wait(.5)
-        click("1507486006667.png")
+        scr1.doubleClick("1507486006667-1.png")
+        type(Key.F7)
         
         exit()
     else:
         wait(.5)
-        click("1512958383576.png")
+        click("1513223915631.png")

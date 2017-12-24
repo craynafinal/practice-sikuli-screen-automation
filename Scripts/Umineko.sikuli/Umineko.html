@@ -72,6 +72,7 @@
 <pre class="sikuli-code">
 Settings.MoveMouseDelay = <span class="dig">0</span>
 running = True
+scr1 = Screen(<span class="dig">1</span>)
 
 <span class="kw">def</span> runHotkey(event):
     <span class="kw">global</span> running
@@ -80,18 +81,17 @@ running = True
 Env.addHotkey(Key.F1, KeyModifier.ALT, runHotkey)
 
 <span class="kw">while</span>(running):
-    <span class="kw">if</span> (exists(<img src="1512958109835.png" />, <span class="dig">.5</span>) <span class="kw">and</span> exists(<img src="1512958130690.png" />, <span class="dig">.5</span>)):
-        <span class="cmt">#If tip window shows up, wait</span>
+    <span class="kw">if</span> (exists(<img src="1513223956876.png" />, <span class="dig">.5</span>) <span class="kw">and</span> exists(<img src="1513223975753.png" />, <span class="dig">.5</span>)):
+         <span class="cmt">#If tip window shows up, wait</span>
         <span class="skw">wait</span>(<span class="dig">2</span>)
         <span class="cmt">#Finding element in second screen</span>
-        <span class="skw">click</span>(<img src="1511398531290.png" />)
-        <span class="skw">wait</span>(<span class="dig">.5</span>)
-        <span class="skw">click</span>(<img src="1507486006667.png" />)
+        scr1.<span class="skw">doubleClick</span>(<img src="1507486006667-1.png" />)
+        <span class="skw">type</span>(Key.F7)
 
         exit()
     <span class="kw">else</span>:
         <span class="skw">wait</span>(<span class="dig">.5</span>)
-        <span class="skw">click</span>(<img src="1512958383576.png" />)
+        <span class="skw">click</span>(<img src="1513223915631.png" />)
 </pre>
 </body>
 </html>

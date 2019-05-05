@@ -67,12 +67,12 @@
    </head>
 <body>
 <div class="info">
-<h2>Higurashi.sikuli</h2> <a href="Higurashi.zip">(Download this script)</a>
+<h2>Air.sikuli</h2> <a href="Air.zip">(Download this script)</a>
 </div>
 <pre class="sikuli-code">
 Settings.MoveMouseDelay = <span class="dig">0</span>
 running = True
-count = <span class="dig">0</span>
+waitTimestamp = time.time()
 
 <span class="kw">def</span> runHotkey(event):
     <span class="kw">global</span> running
@@ -81,21 +81,11 @@ count = <span class="dig">0</span>
 Env.addHotkey(Key.F1, KeyModifier.ALT, runHotkey)
 
 <span class="kw">while</span>(running):
-    <span class="kw">if</span> ((exists(<img src="1507485878000.png" />, <span class="dig">.05</span>) <span class="kw">or</span> (exists(<img src="1509668195740.png" />, <span class="dig">.05</span>)))):
-        <span class="cmt">#If tip window shows up, wait</span>
+    <span class="kw">if</span> (exists(Pattern(<img src="1532233126059.png" />).similar(<span class="dig">0.80</span>), <span class="dig">.5</span>)):
         <span class="skw">wait</span>(<span class="dig">2</span>)
-        <span class="cmt">#Finding element in second screen</span>
-        <span class="skw">type</span>(Key.F7)
-
+        <span class="skw">type</span>(Key.F8)
+        running = False
         exit()
-    <span class="kw">elif</span> (exists(<img src="1547320001138.png" />, <span class="dig">.03</span>) <span class="kw">or</span> exists(<img src="1547320016459.png" />, <span class="dig">.03</span>) <span class="kw">or</span> exists(<img src="1547319967504.png" />, <span class="dig">.03</span>) <span class="kw">or</span> count == <span class="dig">10</span>):
-        <span class="cmt">#Regular sequence</span>
-        <span class="skw">wait</span>(<span class="dig">.03</span>)
-        <span class="skw">type</span>(Key.ENTER)
-        count = <span class="dig">0</span>
-    <span class="kw">else</span>:
-        count += <span class="dig">1</span>
-    <span class="skw">wait</span>(<span class="dig">.03</span>)
 </pre>
 </body>
 </html>
